@@ -1,31 +1,19 @@
 #include <stdio.h>
 
 /**
- * main - MAin Function
- * 
- * Description: prints the alphabet in lowercase, and then in uppercase, followed by a new line.
- *
- * Return: 0 (Pass)
+ * main - Print alphabet in the lowercase and uppercase
+ * followed by a new line
+ * Return : always 0 (success)
  */
-
 int main(void)
 {
-	char ch = 'a';
-	char CH = 'A';
-	
-	/*prints a - z*/
-	while (ch <= 'z')
-	{
-		putchar(ch);
-		++ch;
-	}
-	/*print A - Z*/
-	while (CH <= 'Z')
-	{
-		putchar(CH);
-		++CH
-	}
-	putchar('\n')
+	int ch;
 
+	for (ch = 'a'; ch <= 'z'; ch++)
+		putchar(ch);
+	for (ch = 'A'; ch <= 'Z'; ch++)
+		putchar(ch);
+	putchar(ch);
+	putchar("\n");
 	return (0);
 }
