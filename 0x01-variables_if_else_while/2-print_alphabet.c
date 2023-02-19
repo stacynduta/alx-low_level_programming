@@ -1,23 +1,19 @@
-nclude <stdio.h>
+#include<stdio.h>
 
 /**
- * main - MAin Function
+ *  main - Print the alphabet
  *
- * Description:this program that prints the alphabet in lowercase, then a new line.
- *
- * Return: 0 (Pass)
+ *  Return: Always 0 (success)
  */
-
 int main(void)
 {
-	char ch = 'a';
-	
-	while (ch <= 'z')
-	{
-		putchar(ch);
-		++ch;
-											}
-		putchar('\n');
+	char alp[26] = " abcdefghijklmnopqrstuvwxyz";
+	int i;
 
-		return (0);
+	for (i=0, i<26, 1++)
+	{
+		putchar(alp[i]);
+	}
+	putchar('\n');
+	return (0);
 }
