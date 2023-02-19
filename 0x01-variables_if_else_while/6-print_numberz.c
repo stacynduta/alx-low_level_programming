@@ -1,22 +1,21 @@
 #include<stdio.h>
 
 /**
- * main - Main Function
- * Description:print all single diggits that are base ten ,from zero accampanied with a new line
+ * main - Print  single digits of  base 10 from 0 accampanied with a new line
  *
- * Return:0(pass)
+ *
+ * Return: 0(pass)
+ *
  */
 int main(void)
 {
 	int digit = 0;
 
-	while (digit <=9)
+	for (n = 48; n < 58; n++)
 	{
-		putchar(digit + '0');
-		++digit;
+		putchar(n);
 
 	}
 	putchr('\n);
-
 	return (0):
 }
