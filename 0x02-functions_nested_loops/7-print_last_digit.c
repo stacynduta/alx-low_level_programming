@@ -1,20 +1,23 @@
 #include "main.h"
 
 /**
- * 7-last_digit - Print the last digit of no
- * @n: The no to be treated
- * Return: Value of the last digit of no
- */
-
-int Print_last_digit(int n)
+ * print_last_digit - Print the lastDigit
+ *
+ * @i: integer
+ *
+ * Description: check the code.
+ *
+ * Return: Always 0 (Success)
+*/
+int print_last_digit(int i)
 {
-	int last;
+	int lastDigit;
 
-	last = n % 10;
-	if (last < 0)
-	{
-		last = last * -1;
-	}
-	_putchar(last + '0');
-	return (last);
+	if (i < 0)
+		lastDigit = -1 * (i % 10);
+	else
+		lastDigit = i % 10;
+
+	_putchar (lastDigit + '0');
+	return (lastDigit);
 }

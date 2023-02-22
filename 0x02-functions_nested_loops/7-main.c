@@ -1,13 +1,15 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * main - Entry point
  *
- * Return: Always 0.
+ * Description: check the code.
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int r;
+    int r;
 
     print_last_digit (98);
     print_last_digit (0);
