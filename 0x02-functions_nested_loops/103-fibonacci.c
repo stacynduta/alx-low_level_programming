@@ -1,24 +1,31 @@
-#include <stdio.h>
+#include"main.h"
 
 /**
- * main - Print the sum of even fibanacci numbers
- * less than 4000000
- * Return: Nothing!
- */
+ * main - Prints the sum of even-valued
+ *fibonacci sequence not exceed	4million
+ *
+ * Return: Always 0 (Success)
+*/
 
 int main(void)
 {
-	int i = 0;
-	long j = 1, k = 2, sum = k;
+	unsigned long fib1 = 0, fib2 = 1, sum;
+	float total_sum;
 
-	while (k + j < 4000000)
+	while (1)
 	{
-		k +=j;
-		if ( k % 2 == 0)
-			sum += k;
-		j = k - j;
-		++i;
+		sum = fib1 + fib2;
+
+		if (sum > 4000000)
+			break;
+
+		if ((sum % 2) == 0)
+			total_sum += sum;
+
+		fib1 = fib2;
+		fib2 = sum;
 	}
-	printf("%d\n", sum);
+	printf("%.0f\n", total_sum);
+
 	return (0);
 }

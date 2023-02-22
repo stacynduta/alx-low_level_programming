@@ -1,29 +1,36 @@
 #include <stdio.h>
-
 /**
- * main - Prints the first 52 fibanocci numbers
- * Return: Nothing!
- */
-
+ * main - check the code.
+ *
+ * Description: prints fibonnaci
+ *
+ * Return: Always 0 (Success)
+*/
 int main(void)
 {
-	int i = 0;
-	long j = 1, k =2;
+	long first, second, i;
 
-	while (i < 50)
+	first = 2;
+	second = 1;
+
+	i = 0;
+
+	printf("%ld, %ld, ", second, first);
+	while (i < 48)
 	{
-		if (i == 0)
-			printf("%\d", j);
-		else if (i == 1)
-			printf(",%\d", k);
-		else
-		{
-			k += j;
-			j = k - j;
-			printf(", %\d", k);
-		}
+		long fib = first + second;
+
+		printf("%ld", fib);
+
+
+		if (i < 47)
+			printf(", ");
+
+		second = first;
+		first = fib;
 		++i;
 	}
 	printf("\n");
+
 	return (0);
 }
