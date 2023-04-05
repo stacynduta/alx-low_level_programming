@@ -58,31 +58,34 @@ size_t looped_listint_len(const listint_t *head)
  *
  * Return: The number of nodes in the list.
  */
+
 size_t print_listint_safe(const listint_t *head)
 {
- size_t nodes, index = 0;
+	const listint_t *tmp_n = NULL;
+	const listint_t *l_n = NULL;
+	size_t counter = 0;
+	size_t new_n;
 
- nodes = looped_listint_len(head);
-
- if (nodes == 0)
- {
- for (; head != NULL; nodes++)
- {
- printf("[%p] %d\n", (void *)head, head->n);
- head = head->next;
- }
- }
-
- else
- {
- for (index = 0; index < nodes; index++)
- {
- printf("[%p] %d\n", (void *)head, head->n);
- head = head->next;
- }
-
- printf("-> [%p] %d\n", (void *)head, head->n);
- }
-
- return (nodes);
+	tmp_n = head;
+	while (tmp_n)
+	{
+		printf("[%p] %d\n", (void *)tmp_n, tmp_n->n);
+		counter++;
+		tmp_n = tmp_n->next;
+		l_n = head;
+		new_n = 0;
+		while (new_n < counter)
+		{
+			if (tmp_n == l_n)
+			{
+				printf("-> [%p] %d\n", (void *)tmp_n, tmp_n->n);
+				return (counter);
+			}
+			l_n = l_n->next;
+			new_n++;
+		}
+		if (!head)
+			exit(98);
+	}
+	return (counter);
 }
